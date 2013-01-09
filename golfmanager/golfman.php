@@ -707,6 +707,12 @@ function add_the_tournament () {
 }
 
 
+function add_my_stylesheet(){
+  $myStyleUrl = plugins_url ('css/gm_sample_style.css' , __FILE__);
+  wp_enqueue_style('golfTrackerStyleSheets',$myStyleUrl);
+
+}
+
 
  
 // main Loop
