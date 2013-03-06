@@ -1,40 +1,88 @@
-div#content div.golfscore table tbody tr td {
-	text-align: center;
-	padding: 2px 5px;
-	border: 1px solid #fffeff;
-	background-color: #f7f7f7;
+.gm_row_header {
+	float: left;
+	display: table-column;  
+	width: 100px; 
+	color: red;
 }
 
-div#content div.golfscore td.golflocationheader {
-	text-align: left;
-	background-color: #fefffe;
-	color: #4b6167;
-	font: small-caps bold 18px Georgia, "Times New Roman", Times, serif;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	text-decoration: none;
-	padding-left: 0;
+.gm_row_content {
+	float: left; 
+	display: table-row; 
+	width: 100px; 
+	color: green; 
 }
 
-div#content div.golfscore tr.holerow td{
-	background: lightblue;
-	border: 1px solid white;
+
+.gm_hidden_table {
+	display: table ;
+	background: aqua; 
+	border: black; 
 }
 
-div#content div.golfscore tr td.scoreheader{
-  background-color: #8da1b6;
-	color: #fefffe;
-	font-weight: bold;
-	text-align: left;
+.gm_table {
+	border: black; 
 }
 
-.golfscore table{
-	font: 11px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+.gm_scorecard_table {
+	border: 1px solid black; 
+	width: auto;
+	background: white ; 
+	background-color: green;
+	color: white;
 }
 
-.playdate{
-  font-size: 12px;
+
+.gm_member_div {
+	float: left;
+    margin: 10px 5px 60px 10px;cd 
 }
 
-.wrap h2 {color: red !important}
+.gm_gal_caption_member {
+	width: 180px;	
+	font-size: smaller;
+	margin-bottom: 10px;
+}
+
+.LeaderBoardTable {
+	font-size: small;
+	border: black;
+}
+
+.LeaderBoardTable td {
+	border-style: solid;
+	border-collapse: collapse;
+	border-color: #000000; 
+}
+
+.par {
+	background-color: aqua;
+}
+
+.birdie {
+	background-color: green;
+}
+.bogey {
+	background-color: yellow
+}
+
+.better {
+	background-color: olive;
+}
+
+.worst {
+	background-color: #ffa600;
+}
+#reg_players {
+	float: left;
+	width: 100px; 
+}
+
+#sel_rnd {
+	float: left; 
+	width: 150px; 
+}
+
+#sel_tnm {
+	float: left;
+}
 
