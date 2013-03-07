@@ -46,8 +46,9 @@ function get_results_rnd ($id_round) {
 	FROM $tb_scores as scores INNER JOIN $tb_hp_play as hp_tb ON scores.License = hp_tb.License
 	INNER JOIN $tb_rounds as rounds ON rounds.ID_Round = scores.ID_Round AND hp_tb.ID_Round = rounds.ID_Round 
 	INNER JOIN $tb_fields as fields ON rounds.ID_Field = fields.ID_Field
-	GROUP BY scores.License,hp_tb.hp_play_round 
-	HAVING ID_Round = %d AND golpes != 0 
+	WHERE rounds.ID_Round = %d 
+	GROUP BY scores.License,hp_tb.hp_play_round
+	HAVING golpes != 0 
 	ORDER BY 1
 	"; 
 	

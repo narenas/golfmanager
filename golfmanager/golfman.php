@@ -7,7 +7,8 @@ Author: 		Nicolas Arenas
 : 		GPL3
 */
 
-
+ 
+ 
 
 
 register_activation_hook( __FILE__ , 'install_golfman');
@@ -745,7 +746,7 @@ function import_csv () {
 						//$hoyo[$i-9+1] = $datos[$i] ;  
 						$number = $i-9+1;
 						
-						$insert = $wpdb->insert($tb_scores,array(
+						$wpdb->insert($tb_scores,array(
 							'Number'=>$number, 
 							'ID_Round'=>$id_ronda,
 							'ID_Field'=>$field_id,
@@ -760,6 +761,7 @@ function import_csv () {
 							'%d'
 						));
 						
+						fwrite($fh,$wpdb->last_query . "\n");
 						$wpdb->print_error;
 					}
 					
@@ -773,6 +775,7 @@ function import_csv () {
 							'%f'
 							));
 					$wpdb->print_error;
+					fwrite($fh,$wpdb->last_query);
 				}
 				else {
 					fwrite($fh, "La licencia $licencia no juega\n");
@@ -1351,11 +1354,14 @@ function round_winner($id_round) {
 	}
 	asort($arrayResultados); 
 	
-	$winner = key($arrayResultados); 
+	$winner = key($arrayResultados);
 	foreach ($arrayResultados as $key => $val) {
 		fwrite($fh, "$key = $val\n" ); 
 		
 	}
+	
+	fwrite($fh, "El ganador es $winner\n") ;
+	
 	fclose($fh); 
 	return $winner; 
 }

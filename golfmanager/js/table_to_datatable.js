@@ -37,8 +37,6 @@ jQuery(document).ready(function(){
 			var license = oTable.fnGetData(this,0); 
 			var tnmt_id = document.getElementById('tnmt_id').innerText ;
 			
-			
-			//alert(table_type);
 			var json_request = {
 				action: 'get_json_player_rounds',
 				tnmt_id: tnmt_id,
@@ -49,7 +47,6 @@ jQuery(document).ready(function(){
 
 			jQuery.post(ajaxurl,json_request,function (response) {
 				json_rnd = JSON.parse(response) ;
-				alert(response);
 				var socoreClass ; 
 				for (var i in json_rnd) {
 					var cabecera = ''; 
@@ -164,7 +161,7 @@ jQuery(document).ready(function(){
 		}
 		if (tnmt_rounds != null ){
 			var rondas = tnmt_rounds.innerText;
-			rondas=+2;
+			rondas =  parseInt(rondas) + 2 ;
 		}
 		oTable = jQuery('.resultsDatatable').dataTable() ; 
 	//oTable.fnSort( [ [tnmt_rounds,'asc'] ] );
