@@ -1156,10 +1156,10 @@ function show_gallery ($atts) {
     	}
 		
 		//$player_url = plugins_url('includes/player.php' , __FILE__);
-		echo '<div class="gm_member_div">';
-		echo '<a href=' . get_permalink($post_id) . '><img src="' . $foto_url. '" alt="Smiley face" height="190" width="150"></a>';
-		echo '<div class="gm_gal_caption_member">' . $jugador->Name . ' ' . $jugador->Lastname . '</div>' ;
-		echo '</div>';
+		//echo '<div class="gm_member_div">';
+		//echo '<a href=' . get_permalink($post_id) . '><img src="' . $foto_url. '" alt="Smiley face" height="190" width="150"></a>';
+		//echo '<div class="gm_gal_caption_member">' . $jugador->Name . ' ' . $jugador->Lastname . '</div>' ;
+		//echo '</div>';
 		
 	}
 	echo '</div>';
